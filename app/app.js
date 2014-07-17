@@ -23,7 +23,6 @@ app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded() );
 app.use( cookieParser() );
 app.use( express.static( path.join(__dirname, 'static') ) );
-app.use( stylus.middleware(__dirname + '/static') );
 
 /// Routes
 var routes = require('./routes/index');
