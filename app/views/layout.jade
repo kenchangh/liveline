@@ -35,20 +35,20 @@ html(lang='en')
                  maxHeight: 800
                }
              },
-              audio: true
+             audio: true
            },
            // successCallback
            function(localMediaStream) {
-              var video = document.querySelector('video');
-              video.src = window.URL.createObjectURL(localMediaStream);
-              // Do something with the video here, e.g. video.play()
-              video.onloadedmetadata = function(e) {
-              
-              };
+             var video = document.querySelector('video');
+             video.src = window.URL.createObjectURL(localMediaStream);
+             // Do something with the video here, e.g. video.play()
+             video.onloadedmetadata = function(e) {
+             
+             };
            },
            // errorCallback
            function(err) {
-              console.log("The following error occured: " + err);
+             console.log("The following error occured: " + err);
            }
         );
       }
