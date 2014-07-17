@@ -26,9 +26,11 @@ app.use( express.static( path.join(__dirname, 'static') ) );
 
 /// Routes
 var routes = require('./routes/index');
+var auth = require('./routes/auth');
 var users = require('./routes/users');
 
 app.use('/', routes);
+app.use('/', auth);
 app.use('/users', users);
 
 /// Catch 404 and forward to error handler
