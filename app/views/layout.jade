@@ -1,7 +1,18 @@
 doctype html
-html
+html(lang='en')
+
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title This is cool
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+    
   body
+    include header
+
     block content
+
+    include footer
+
+    script(src='/js/jquery.min.js')
+    script(src='/js/jquery.pjax.js')
+
