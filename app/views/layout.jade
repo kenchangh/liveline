@@ -15,4 +15,36 @@ html(lang='en')
 
     script(src='/js/jquery.min.js')
     script(src='/js/jquery.pjax.js')
+    script.
+
+      function hasGetUserMedia() {
+        check = ( navigator.getUserMedia ||
+                  navigator.webkitGetUserMedia ||
+                  navigator.mozGetUserMedia ||
+                  navigator.msGetUserMedia);
+        return check;
+      }
+
+      if (hasGetUserMedia) {
+         navigator.getUserMedia (
+            // constraints
+            {
+               video: true,
+               audio: true
+            },
+            // successCallback
+            function(localMediaStream) {
+               var video = document.querySelector('video');
+               video.src = window.URL.createObjectURL(localMediaStream);
+               // Do something with the video here, e.g. video.play()
+            },
+            // errorCallback
+            function(err) {
+               console.log("The following error occured: " + err);
+            }
+         );
+      }
+      else {
+         console.log("getUserMedia not supported");
+      }
 
