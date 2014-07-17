@@ -21,28 +21,36 @@ html(lang='en')
         check = ( navigator.getUserMedia ||
                   navigator.webkitGetUserMedia ||
                   navigator.mozGetUserMedia ||
-                  navigator.msGetUserMedia);
+                  navigator.msGetUserMedia );
         return check;
       }
 
       if (hasGetUserMedia) {
          navigator.getUserMedia (
-            // constraints
-            {
-               video: true,
-               audio: true
-            },
-            // successCallback
-            function(localMediaStream) {
-               var video = document.querySelector('video');
-               video.src = window.URL.createObjectURL(localMediaStream);
-               // Do something with the video here, e.g. video.play()
-            },
-            // errorCallback
-            function(err) {
-               console.log("The following error occured: " + err);
-            }
-         );
+           // constraints
+           {
+             video: {
+               mandatory: {
+                 maxWidth: 800,
+                 maxHeight: 800
+               }
+             },
+              audio: true
+           },
+           // successCallback
+           function(localMediaStream) {
+              var video = document.querySelector('video');
+              video.src = window.URL.createObjectURL(localMediaStream);
+              // Do something with the video here, e.g. video.play()
+              video.onloadedmetadata = function(e) {
+              
+              };
+           },
+           // errorCallback
+           function(err) {
+              console.log("The following error occured: " + err);
+           }
+        );
       }
       else {
          console.log("getUserMedia not supported");
