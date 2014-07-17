@@ -16,12 +16,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(favicon());
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'static')));
+app.use( favicon() );
+app.use( logger('dev') );
+app.use( bodyParser.json() );
+app.use( bodyParser.urlencoded() );
+app.use( cookieParser() );
+app.use( express.static( path.join(__dirname, 'static') ) );
 
 /// Routes
 var routes = require('./routes/index');
@@ -63,3 +63,4 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
