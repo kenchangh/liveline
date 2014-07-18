@@ -17,15 +17,12 @@ html(lang='en')
     script(src='/js/jquery.pjax.js')
     script.
 
-      function hasGetUserMedia() {
-        check = ( navigator.getUserMedia ||
-                  navigator.webkitGetUserMedia ||
-                  navigator.mozGetUserMedia ||
-                  navigator.msGetUserMedia );
-        return check;
-      }
+      navigator.getUserMedia = ( navigator.getUserMedia ||
+                                     navigator.webkitGetUserMedia ||
+                                     navigator.mozGetUserMedia ||
+                                     navigator.msGetUserMedia );
 
-      if (hasGetUserMedia) {
+      if ( navigator.getUserMedia ) {
          navigator.getUserMedia (
            // constraints
            {
