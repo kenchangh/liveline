@@ -1,10 +1,18 @@
 extends layout
 
 block content
-  div.container
-    div.col-md-8.col-md-offset-2
-      h1 Live Line
-      p Really, really fast video chat.
+  div.container-fluid
+    div.signup-stripe.jumbotron.col-md-8.col-md-offset-2
+      h1 Video chat? What's new?
+      p We'll show you.
       br
-      video(autoplay)
-      
+
+      div.col-md-2
+        input#signup-uid.signup-form.form-control(type='text', placeholder='Your username...')
+        br
+        input#signup-pw.signup-form.form-control(type='password', placeholder='Your password...')
+        br
+        input.signup-form.form-control(type='password', placeholder='Reenter password...')
+        br
+        button.signup-btn.btn.btn-lg.btn-success Create an account
+
