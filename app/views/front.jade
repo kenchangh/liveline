@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.container-fluid
+
+    div.front-content.col-md-8.col-md-offset-2
+      div.pull-left 
+        h1.front-headline Liveline connects you and your loved ones,<br/>real time.
+
+      div.pull-right
+        h2 Create an account
+        br
+        input#signup-uid.signup-form.form-control(type='text', placeholder='Your username')
+        br
+        input#signup-pw.signup-form.form-control(type='password', placeholder='Your password')
+        br
+        input.signup-form.form-control(type='password', placeholder='Reenter password')
+        br
+        button#signup-btn.btn.btn-lg.btn-default(type='submit') Create an account
+
+    div.row
+      div.front-content.col-md-6.col-md-offset-2
+        p Something here
+
+      div.front-content.col-md-2
+        p cool
+      
+
+

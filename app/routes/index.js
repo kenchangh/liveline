@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('front', { title: 'Liveline - A better way to connect' });
 });
 
 module.exports = router;

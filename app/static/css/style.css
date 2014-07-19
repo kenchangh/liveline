@@ -1,18 +1,18 @@
 /*
  * Author: Maverick Chan
- * Project: Live Line
+ * Project: Liveline
  */
 
 body {
-  padding-top: 50px;
   font-family: "Roboto", sans-serif;
+  background-color: #F1F2F2;
+  position: relative;
 }
 
 @font-face {
   font-family: 'Roboto';
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: local('Roboto Regular'), local('Roboto-Regular'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff") format('woff');
 }
 
@@ -21,16 +21,38 @@ abbr[title] {
   cursor: pointer;
 }
 
-a {
-  color: #00b7ff;
-}
-
-.signup-stripe {
+.front-content {
+  background-color: #FFFFFF;
   background-size: cover;
   padding: 4em;
+  margin-bottom: 2.5em;
+}
+
+.front-headline {
+  font-size: 2em;
 }
 
 .signup-form {
   width: 17em;
+}
+
+#signup-btn {
+  background-color: #E8616C;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+#signup-btn:hover {
+  background-color: #E84955; 
+}
+
+#signup-btn:active {
+  background-image: -ms-linear-gradient(bottom, #E84955 0%, #585858 500%);
+  background-image: -moz-linear-gradient(bottom, #E84955 0%, #585858 500%);
+  background-image: -o-linear-gradient(bottom, #E84955 0%, #585858 500%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E84955), color-stop(5, #585858));
+  background-image: -webkit-linear-gradient(bottom, #E84955 0%, #585858 500%);
+  background-image: linear-gradient(to top, #E84955 0%, #585858 500%); 
 }
 
