@@ -6,7 +6,7 @@
 /* Page needs */
 body {
   /*font-family: "Roboto", sans-serif;*/
-  background-color: #F1F2F2;
+  background-color: #E6E6E6;
 }
 
 /* Default font is better
@@ -88,6 +88,10 @@ abbr[title] {
   -moz-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
+}
+
+.front-features:hover {
+  background-color: #D8D8D8;
 }
 
 .feature-header {
