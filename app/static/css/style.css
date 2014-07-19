@@ -16,6 +16,11 @@ body {
   src: local('Roboto Regular'), local('Roboto-Regular'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff") format('woff');
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 abbr[title] {
   border-bottom-width: 0;
   cursor: pointer;
