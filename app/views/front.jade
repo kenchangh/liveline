@@ -19,22 +19,27 @@ block content
         button#signup-btn.btn.btn-lg.btn-default(type='submit') Create an account
 
     div.front-content.text-center.col-md-8.col-md-offset-2
-      h2 Why you'll love Liveline
+      h2.feature-header Why you'll love Liveline
 
       mixin feature(glyphicon)
-        div.front-features
-          span.glyphicon.feature-icon(class!=glyphicon)
-        if block
-          block
-        else
-          p A really cool feature.
+        td
+          div.front-features.element-centered
+            span.glyphicon.feature-icon(class!=glyphicon)
+          if block
+            block
+          else
+            p A really cool feature.
 
-      +feature('glyphicon-cloud')
-        p Do everything in the cloud
-      +feature('glyphicon-heart-empty')
-        p Beautiful interface that you'll love
-      +feature('glyphicon-globe')
-        p Connect with loved ones around the globe
-      +feature('glyphicon-ok-sign')
-        p Fast, stable user experience
+      table.feature-table.element-centered
+        tr.feature-row
+          +feature('glyphicon-cloud')
+            p.feature-description Video chat in the browser (no installations!)
+          +feature('glyphicon-heart-empty')
+            p.feature-description Beautiful interface that you'll love
+
+        tr.feature-row
+          +feature('glyphicon-globe')
+            p.feature-description Chat with loved ones around the globe
+          +feature('glyphicon-ok-sign')
+            p.feature-description Fast, stable user experience
 
