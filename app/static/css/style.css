@@ -5,17 +5,17 @@
 
 /* Page needs */
 body {
-  font-family: "Roboto", sans-serif;
+  /*font-family: 'Roboto';*/
   background-color: #F1F2F2;
-  position: relative;
 }
 
+/* Default font is better
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff") format('woff');
-}
+}*/
 
 /* Navbar */
 .navbar-static-bottom {
@@ -45,6 +45,10 @@ abbr[title] {
   padding: 3em;
   margin-bottom: 2.5em;
   border: 0.08em solid #DBDBDB;
+}
+
+.front-signup {
+  height: 36em;
 }
 
 .front-headline {
@@ -112,6 +116,14 @@ abbr[title] {
 
 .feature-description {
   margin-top: 20px;
+}
+
+.avoid-list {
+  list-style-type: none;
+}
+
+.avoid-list > li {
+  margin-top: 2em;
 }
 
 

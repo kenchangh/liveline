@@ -3,14 +3,14 @@ extends layout
 block content
   div.container-fluid
 
-    div.front-content.col-md-8.col-md-offset-2
+    div.front-signup.front-content.col-md-8.col-md-offset-2
       div.pull-left 
         h1.front-headline Liveline connects you and your loved ones,<br/>real time.
 
       div.pull-right
         h2 Create an account
         br
-        input#signup-uid.signup-form.form-control(type='text', placeholder='Your username')
+        input#signup-uid.signup-form.form-control(type='email', placeholder='Your email')
         br
         input#signup-pw.signup-form.form-control(type='password', placeholder='Your password')
         br
@@ -42,4 +42,20 @@ block content
             p.feature-description Chat with loved ones around the globe
           +feature('glyphicon-ok-sign')
             p.feature-description Fast, stable user experience
+
+    div.front-content.text-center.col-md-8.col-md-offset-2
+      h2 With Liveline, you can avoid
+      ul.avoid-list
+        li
+          h4 Installing
+          p Liveline is a site, no installation needed.
+        li
+          h4 Updating
+          p We will do that for you, seamlessly.
+        li
+          h4 Slow connections
+          p Nothing prevents a good chat than this.
+        li
+          h4 Unsupported features
+          p Liveline doesn't use Flash, which is unsupported by iOS.
 
