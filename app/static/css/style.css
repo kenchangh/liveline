@@ -3,6 +3,7 @@
  * Project: Liveline
  */
 
+/* Page needs */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #F1F2F2;
@@ -26,11 +27,13 @@ abbr[title] {
   cursor: pointer;
 }
 
+/* Front page */
 .front-content {
   background-color: #FFFFFF;
   background-size: cover;
-  padding: 4em;
+  padding: 3em;
   margin-bottom: 2.5em;
+  border: 0.08em solid #DBDBDB;
 }
 
 .front-headline {
@@ -59,5 +62,19 @@ abbr[title] {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E84955), color-stop(5, #585858));
   background-image: -webkit-linear-gradient(bottom, #E84955 0%, #585858 500%);
   background-image: linear-gradient(to top, #E84955 0%, #585858 500%); 
+}
+
+.front-features {
+  border: 1px solid #D8D8D8;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 50px;
 }
 
