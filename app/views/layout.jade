@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Liveline connects you and your loved ones through video chats')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/front-style.css')
+    
+  body
+    include front-header
+
+    block content
+
+    include footer
+
+    script(src='/js/jquery.min.js')
+    script(src='/js/jquery.pjax.js')
+    script.
+
+      $('#signup-btn').click(function() {
+        $.ajax({
+          type: 'POST',
+          url: '/signup',
+          data: {
+            uid: $('#signup-email').val(),
+            pw: $('#signup-pw').val()
+          }
+        })
+      });
+
