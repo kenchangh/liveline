@@ -1,18 +1,24 @@
 nav.rainbow-border-top.navbar.navbar-default.navbar-static-top(role='navigation') 
     div.col-md-8.col-md-offset-2
-      ul.nav.navbar-left
-        li.navbar-text
-          a(href='/') Liveline
 
-      ul.nav.navbar-right
-        li.navbar-text
-          a(href='/features') Features
+      div.navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapser')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/') Liveline
 
-        li.navbar-text
-          a(href='/about') About
+      div#navbar-collapser.collapse.navbar-collapse
+        ul.nav.navbar-right
+          li.navbar-text
+            a(href='/features') Features
 
-        li.navbar-text
-          a(href='/blog') Blog
+          li.navbar-text
+            a(href='/about') About
+
+          li.navbar-text
+            a(href='/blog') Blog
 
           li.navbar-text
             button#login-btn.btn.btn-sm.btn-default 
