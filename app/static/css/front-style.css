@@ -9,13 +9,15 @@ body {
   background-color: #E6E6E6;
 }
 
-/* Default font is better
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url("http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff") format('woff');
-}*/
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+abbr[title] {
+  border-bottom-width: 0;
+  cursor: pointer;
+}
 
 /* Navbar */
 .navbar-static-bottom {
@@ -28,14 +30,32 @@ body {
   background-color: #FFFFFF;
 }
 
-a, a:hover {
-  text-decoration: none;
-  color: inherit;
+.rainbow-border-top {
+  display: block;
+  width: 100%;
+  /*position: absolute;
+  bottom: 0;
+  left: 0;*/
+  background-color: #eff2f3;
+  background-position: center top;
+  background-repeat: repeat-x;
+  background-image: url(/images/rainbow-border.png);
+  background-size: 100% 4px;
+  padding-top: 2px;
 }
 
-abbr[title] {
-  border-bottom-width: 0;
-  cursor: pointer;
+.rainbow-border-bottom {
+  display: block;
+  width: 100%;
+  /*position: absolute;
+  bottom: 0;
+  left: 0;*/
+  background-color: #eff2f3;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-image: url(/images/rainbow-border.png);
+  background-size: 100% 4px;
+  padding-top: 2px;
 }
 
 /* Front page */
