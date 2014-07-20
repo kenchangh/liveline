@@ -6,4 +6,8 @@ router.get('/', function(req, res) {
   res.render('front', { title: 'Liveline - A better way to connect' });
 });
 
+router.get('/', function(req, res) {
+  res.render('front', { title: 'Liveline - A better way to connect' });
+});
+
 module.exports = router;
