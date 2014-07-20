@@ -145,3 +145,12 @@ abbr[title] {
   margin-top: 2em;
 }
 
+/* Login page */
+#login-header {
+  margin-bottom: 1.6em;
+}
+
+.login-form {
+  margin-bottom: 1em;
+}
+
