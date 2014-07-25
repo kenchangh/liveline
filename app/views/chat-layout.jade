@@ -9,6 +9,11 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/front-style.css')
+
+    style.
+      #chat-messages {
+        list-style-type: none;
+      }
     
   body
     include front-header
@@ -23,15 +28,20 @@ html(lang='en')
     script(src='/socket.io/socket.io.js')
     script.
       var socket = io();
+      var chatbox = $('#chatbox');
+      var messagebox = $('#chat-messages');
 
-      $('#signup-btn').click(function() {
-        $.ajax({
-          type: 'POST',
-          url: '/signup',
-          data: {
-            uid: $('#signup-email').val(),
-            pw: $('#signup-pw').val()
-          }
-        })
+      $('#chatbox').keypress(function(event) {
+        if (event.which == 13) {
+          var message = chatbox.val();
+          socket.emit( 'new message', message );
+          chatbox.val('');
+          //messagebox.append('<li>' + message + '</li><hr/>');
+          return false;
+        } 
+      });
+
+      socket.on('new message', function(message) {
+        messagebox.append('<li>' + message + '</li><hr/>');
       });
 

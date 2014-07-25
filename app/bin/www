@@ -6,4 +6,21 @@ app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
+  console.log('Listening on port 3000');
 });
+
+var io = require('socket.io')(server);
+
+io.on('connection', function(socket) {
+  console.log('A user connected');
+
+  socket.on('disconnect', function() {
+    console.log('A user disconnected');
+  });
+
+  socket.on('new message', function(message) {
+    console.log('Message: ' + message);
+    io.emit('new message', message);
+  });
+});
+

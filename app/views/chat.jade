@@ -1,0 +1,11 @@
+extends chat-layout
+
+block content
+  div.container-fluid
+    div.front-content.col-md-8.col-md-offset-2
+      h1 Open Chat Area
+      div.panel.panel-default
+        div.panel-body
+          ul#chat-messages
+      textarea#chatbox.form-control(placeholder='Enter your message...')
+
