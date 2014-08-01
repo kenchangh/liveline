@@ -26,7 +26,23 @@ html(lang='en')
     script(src='/js/bootstrap.min.js')
     script(src='/js/jquery.pjax.js')
     script(src='/socket.io/socket.io.js')
+    script(src='http://cdn.peerjs.com/0.3/peer.min.js')
     script.
+      var peer = new Peer('someid', {host: 'localhost', port: 9000});
+      var conn = peer.connect('another-peers-id');
+      conn.on('open', function(){
+        conn.send('hi!');
+      });
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      navigator.getUserMedia({video: true, audio: true}, function(stream) {
+        var call = peer.call('another-peers-id', stream);
+        call.on('stream', function(remoteStream) {
+          // Show stream in some <video> element.
+        });
+      }, function(err) {
+        console.log('Failed to get local stream' ,err);
+      });
+
       var socket = io();
       var chatbox = $('#chatbox');
       var messagebox = $('#chat-messages');

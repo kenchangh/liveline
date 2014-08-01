@@ -10,6 +10,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var PeerServer = require('peer').PeerServer;
+var server = new PeerServer({port: 9000})
+
 var app = express();
 
 // View engine setup
@@ -61,6 +64,14 @@ app.use(function(err, req, res, next) {
       message: err.message,
       error: {}
   });
+});
+
+server.on('connection', function(id){
+  console.log(id + 'has connected');
+});
+
+server.on('disconnect', function(id){
+  console.log(id + 'has disconnected');
 });
 
 module.exports = app;
